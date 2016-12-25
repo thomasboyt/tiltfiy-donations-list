@@ -13,7 +13,9 @@ export default class DonationItem extends React.Component<Props, {}> {
     }
 
     return (
-      <span> - {donation.comment}</span>
+      <div className="donation-comment">
+        {donation.comment}
+      </div>
     );
   }
 
@@ -21,10 +23,14 @@ export default class DonationItem extends React.Component<Props, {}> {
     const {donation} = this.props;
 
     return (
-      <li>
-        {donation.name} - {formatUSD(donation.amount)}
+      <div className="donation">
+        <div className="donation-main">
+          <div className="donation-name">{donation.name}</div>
+          <div className="donation-amount">{formatUSD(donation.amount)}</div>
+        </div>
+
         {this.maybeRenderComment(donation)}
-      </li>
+      </div>
     );
   }
 }

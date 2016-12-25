@@ -26,12 +26,19 @@ export default class App extends React.Component<Props, {}> {
 
     return (
       <div>
-        Total raised: {formatUSD(campaign.total_raised)} of {formatUSD(campaign.goal)}
-        <ul>
+        <div className="title">
+          go to <strong>mario3.pro</strong> to donate!
+        </div>
+
+        <div className="raised">
+          Total raised: {formatUSD(campaign.total_raised)}
+        </div>
+
+        <div>
           {campaign.donations.map((donation) => (
             <DonationItem donation={donation} key={donation.id} />
           ))}
-        </ul>
+        </div>
       </div>
     )
   }

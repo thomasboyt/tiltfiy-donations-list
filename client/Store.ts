@@ -22,7 +22,6 @@ export default class Store {
     const body = await resp.json();
 
     this.campaign = body;
-    // this.campaign = mockCampaign;
 
     if (this.onChange) {
       this.onChange();

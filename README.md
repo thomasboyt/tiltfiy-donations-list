@@ -1,0 +1,1 @@
+This is a web app to create a live-updating donations list for a [Tiltify](https://www.tiltify.com/) campaign. I'm going to use it in my upcoming Mario stream, displayed on the side of the stream. I'm using it instead of Tiltify's overlay so I can show a list of recent donations.

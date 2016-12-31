@@ -3,6 +3,7 @@ import * as React from 'react';
 import Store from './Store';
 import DonationItem from './DonationItem';
 import {formatUSD} from './utils';
+import Timer from './Timer';
 
 interface Props {
   store: Store;
@@ -26,12 +27,14 @@ export default class App extends React.Component<Props, {}> {
 
     return (
       <div>
-        <div className="title">
-          go to <strong>mario3.pro</strong> to donate!
-        </div>
+        <Timer />
 
         <div className="raised">
-          Total raised: {formatUSD(campaign.total_raised)}
+          Total raised: <strong>{formatUSD(campaign.total_raised)}</strong>
+        </div>
+
+        <div className="title">
+          go to <strong>mario3.pro</strong> to donate!
         </div>
 
         <div>
